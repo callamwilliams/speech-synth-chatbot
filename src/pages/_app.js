@@ -5,13 +5,12 @@ import { ThemeProvider } from 'styled-components';
 import { withRouter } from 'next/router';
 import { activeTheme } from '../styles/theme';
 import { GlobalStyle } from '../styles/global';
-import { wrapper } from '../store/configureStore';
 
 const App = ({ Component, pageProps }) => (
     <>
         <Head>
-            <title>LPG chatbot</title>
-            <meta property="og:title" content="lpg-voice-chat" key="title" />
+            <title>Chatbot</title>
+            <meta property="og:title" content="voice-chat" key="title" />
             <meta name="theme-color" content="#5bbad5" />
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link
@@ -35,4 +34,4 @@ App.propTypes = {
     Component: PropTypes.any.isRequired,
 };
 
-export default wrapper.withRedux(withRouter(App));
+export default withRouter(App);
